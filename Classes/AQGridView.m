@@ -354,6 +354,41 @@ NSString * const AQGridViewSelectionDidChangeNotification = @"AQGridViewSelectio
 	_gridData.rightPadding = inset;
 }
 
+- (CGFloat) topContentInset
+{
+	return ( _gridData.topPadding );
+}
+
+- (void) setTopContentInset: (CGFloat) inset
+{
+	_gridData.topPadding = inset;
+}
+
+- (CGFloat) bottomContentInset
+{
+	return ( _gridData.bottomPadding );
+}
+
+- (void) setBottomContentInset: (CGFloat) inset
+{
+	_gridData.bottomPadding = inset;
+}
+
+- (void)setGridViewPadding:(CGFloat)padding {
+    [self setGridViewPadding:padding leftRight:padding];
+}
+
+- (void)setGridViewPadding:(CGFloat)topBottom leftRight:(CGFloat)leftRight {
+    [self setGridViewPadding:topBottom right:topBottom bottom:leftRight left:leftRight];
+}
+
+- (void)setGridViewPadding:(CGFloat)top right:(CGFloat)right bottom:(CGFloat)bottom left:(CGFloat)left {
+    [self setTopContentInset:top];
+    [self setRightContentInset:right];
+    [self setBottomContentInset:bottom];
+    [self setLeftContentInset:left];
+}
+
 - (CGSize) gridCellSize
 {
 	return ( [_gridData cellSize] );

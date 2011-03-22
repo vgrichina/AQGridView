@@ -244,6 +244,12 @@ extern NSString * const AQGridViewSelectionDidChangeNotification;
 
 @property (nonatomic, assign) CGFloat leftContentInset;
 @property (nonatomic, assign) CGFloat rightContentInset;
+@property (nonatomic, assign) CGFloat topContentInset;
+@property (nonatomic, assign) CGFloat bottomContentInset;
+
+- (void)setGridViewPadding:(CGFloat)padding;
+- (void)setGridViewPadding:(CGFloat)topBottom leftRight:(CGFloat)leftRight;
+- (void)setGridViewPadding:(CGFloat)top right:(CGFloat)right bottom:(CGFloat)bottom left:(CGFloat)left;
 
 @property (nonatomic, assign) BOOL contentSizeGrowsToFillBounds;	// default is YES. Prior to iPhone OS 3.2, pattern colors tile from the bottom-left, necessitating that this be set to NO to avoid specially-constructed background patterns falling 'out of sync' with the cells displayed on top of it.
 
