@@ -616,7 +616,7 @@ NSString * const AQGridViewSelectionDidChangeNotification = @"AQGridViewSelectio
 	for ( AQGridViewCell * cell in reusableCells )
 	{
 		NSMutableSet * reuseSet = [_reusableGridCells objectForKey: cell.reuseIdentifier];
-		if ( reuseSet == nil )
+		if ( reuseSet == nil && cell.reuseIdentifier )
 		{
 			reuseSet = [[NSMutableSet alloc] initWithCapacity: 32];
 			[_reusableGridCells setObject: reuseSet forKey: cell.reuseIdentifier];
