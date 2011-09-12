@@ -293,6 +293,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = AQGridView;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -309,6 +310,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = AQGridView;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
